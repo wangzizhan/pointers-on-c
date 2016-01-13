@@ -1,4 +1,3 @@
-/*This program has some bugs.*/
 #include<stdio.h>
 int main(void) {
 	int ch;
@@ -11,14 +10,15 @@ int main(void) {
 		else if(ch == '}') {
 			if(braces == 0) { 
 				printf("Extra closing brace.\n");
+				braces--;
 				break;
 			} else if (braces > 0)
 				braces--;
 		}
 	}
-	if(braces == 0) 
-		printf("Braces matched.\n");
-	else
+	if(braces == 0)
+		printf("OK\n");
+	if(braces > 0)	
 		printf("%d unmatched opening braces\n",braces);
 	return 0;
 }
