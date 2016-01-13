@@ -15,7 +15,7 @@ int main(void) {
 	char output[MAX_INPUT];
 
 	n_columns = read_column_numbers(columns,MAX_COLS);
-	while(gets(input) != NULL) {
+	while(fgets(input,MAX_INPUT,stdin) != NULL) {
 		printf("Original input:%s\n",input);
 		rearrange(output,input,n_columns,columns);
 		printf("Rearranged line:%s\n",output);
